@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+ 
+<html ng-app="hCueLogin" ng-controller="hCueLoginController">
+      <head>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Pharmacy Forgotpassword</title>
+          
+          <link href="css/ionic.css" rel="stylesheet">         
+           
+        </head>
+	<body >
+			 
+ 
+			<div class="wrapper"><!--  Wrapper section starts -->
+ 				<div class="main-sec">
+				<div class="content content-bg "><!-- Main content starts -->
+		  
+				    
+					<div class="row">
+						<div class="col text-center pading-forgt">
+							 <h2 class="text-left Login">Login<span>for a richer experience</span></h2>
+							<form action="" id="pharma-login-form">
+                                    <label class="row" >
+                                        <span class="col" ng-show="userdspflag" style="color:red">Enter your user name.</span>
+                                        <span class="col" ng-show="nopswdflag" style="color:red">Enter your password.</span>
+                                        <span class="col" ng-show="pswddspflag" style="color:red">Password do not match!</span>
+                                    </label>
+							    <div class="list login-section">
+							    	 <div class="item item-input-inset">									     
+								      	 <input type="text" id="Useremail" placeholder="enter your email id" onfocus="if(this.value == 'enter your email id'){ this.value=''; useremailidmodel = '';}" onblur="if (useremailidmodel == '') {useremailidmodel = 'enter your email id';} if (this.value == '') {this.value = 'enter your email id';}" ng-model="useremailidmodel">
+								      </div>
+								      
+								       <div class="item item-input-inset">								      
+								        <input type="password" id="password" placeholder="**********" ng-model="passwordmodel">
+								      </div>
+								      
+								      <div class="forgot-btn">
+								        <button type="button" class="button forgtsubmit-btn"  ng-click="loginclick(useremailidmodel,passwordmodel)">Sign in</button>
+								      </div>
+							      	<a class="forgot-paswd" href="#/forgotpass">Forgot Password?</a>
+							      	
+						      	</div>
+						      	
+						      	    
+						    <div class="or-sec-login"><span>or</span></div>
+							      <div class="col text-center goole-btn">	 
+							      	  <a href="#/register-1" class="item item-icon-left">
+									    <i class="icon ion-social-google"></i>
+									   Signup
+									  </a>
+							      	</div>
+                                <div class="or-sec-login"><span>or</span></div>
+							      <div class="col text-center goole-btn">	 
+							      	  <a href="#" class="item item-icon-left">
+									    <i class="icon ion-social-google"></i>
+									   Google
+									  </a>
+							      	</div>	 
+						    </form>
+						
+						    
+						</div>
+							
+						</div>
+					</div><!-- Main content end -->
+				   
+				     
+				</div><!-- Main section End -->
+		</div>	 <!--  Wrapper section Ends -->
+	</body>
+ 
+</html>  

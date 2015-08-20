@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="">
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title>Leads Details</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,800italic,800,600italic,700,700italic' rel='stylesheet' type='text/css'>
+        
+		<link href="css/ionic.css" rel="stylesheet">         
+		<link href="css/custom.css" rel="stylesheet"> 
+   	</head>
+
+<body>
+	 <div class="bar bar-header bar-positive bg-color">
+		<div class="col col-75">
+			<h1 class="title-left txt-white-color margin-0 padd-10">
+				<a class="button ion-android-arrow-back button-clear back-icon"></a>
+				Lead Details
+			</h1>
+
+            
+		</div>
+         <div class="col col-25 text-right header-icon">
+             <a href="#/app/lead" class="add-more-btn"><i class="ion-android-sync" style="color: lightcoral;"></i>Refresh</a>
+             
+         </div>
+	</div> 
+    <div class="wrapper">
+    	<div class="content">
+    		<h1 class="text-center register"><a class="ion-android-arrow-back" href=""></a><span class="title-span">Lead Details</span></h1>
+	          
+			<div class="row lead-details-nav">
+                <div class="col">
+                    <a href="" ng-class="fnSetTabColor(1)"   ng-click="fnShowTab(1)" >leads ({{pharmaLeads.length}})</a>
+                </div>
+                <div class="col">
+                    <a href="" ng-class="fnSetTabColor(2)"   ng-click="fnShowTab(2)" >accepted leads ({{activepharmaLeads.length}})</a>
+                </div>
+			</div>
+            <div class="lead-details-table" ng-show="tabno ==1">
+            	<div class="row lead-details-table-header">
+                    <div class="col">Patient Information</div>
+                    <div class="col text-center distance-km">Distance <i class="ion-arrow-down-c"></i> <span>(KM)</span> </div>
+                    <div class="col text-center">Expires <i class="ion-arrow-down-c"></i> <span>(HH:MM)</span> </div>
+              	</div>
+                <div class="ld-table-info" ng-repeat="leaditem in pharmaLeads">
+                    <div class="row" ng-click="NavigateTo('app.leaddetail-1',leaditem)">
+                        <div class="col">
+                            <h4>{{leaditem.patientDetails.Patient[0].FullName}}</h4>
+                            <p>Est.Order Rs.{{leaditem.estimatedCost}}</p>
+                        </div>
+                        <div class="col text-center"><strong>{{leaditem.Distance}}</strong></div>
+                        <div class="col text-center"><strong>{{CalculateExpiryTime(leaditem.requestSubmitDate)}}</strong></div> 
+                    </div>
+                   
+           		</div>
+            </div>
+
+            <div class="lead-details-table" ng-show="tabno ==2">
+            	<div class="row lead-details-table-header">
+                    <div class="col">Patient Information</div>
+                    <div class="col text-center distance-km">Distance <i class="ion-arrow-down-c"></i> <span>(KM)</span> </div>
+                    <div class="col text-center">Expires <i class="ion-arrow-down-c"></i> <span>(HH:MM)</span> </div>
+                    <div class="col text-center">Delivery </div>
+              	</div>
+                <div class="ld-table-info" ng-repeat="leaditem in activepharmaLeads">
+                    <div class="row"  >
+                        <div class="col" ng-click="NavigateTo('app.acceptedleaddetails-1,leaditem')">
+                            <h4>{{leaditem.patientDetails.Patient[0].FullName}}</h4>
+                            <p><i data-tags="oldschool, call" data-pack="ios" class="ion-ios-telephone"></i> +{{leaditem.patientDetails.PatientPhone[0].PhCntryCD + "-" + leaditem.patientDetails.PatientPhone[0].PhNumber}}</p>
+                        </div>
+                        <div class="col text-center" ng-click="NavigateTo('app.acceptedleaddetails-1')"><strong>2.0</strong></div>
+                        <div class="col text-center" ng-click="NavigateTo('app.acceptedleaddetails-1')"><strong>{{CalculateExpiryTime(leaditem.requestSubmitDate)}}</strong></div>
+                        <div class="col text-center" >
+                       		<label class="checkbox"><input type="checkbox" ng-model="leaditem.delivered" ng-click="showPopup(leaditem)"></label>
+                      	</div>
+                    </div>
+                </div>
+            </div>
+     	</div>
+   </div>
+</body>
+</html>

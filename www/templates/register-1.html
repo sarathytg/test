@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Pharam Registration</title>
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>-->
+           
+          
+          <link href="css/ionic.css" rel="stylesheet">         
+          <link href="css/custom.css" rel="stylesheet">
+       
+        
+        </head>
+	<body>
+			 
+			<div class="wrapper"><!-- wrapper Starts -->
+			<div class="content "><!-- Main content starts -->
+				
+				 <h1 class="text-center register">Register</h1>
+					
+				 <div class="row">
+					<div class="col">
+						 <div class="basic-info">
+					        <div class="checkout-wrap">
+					          <ul class="checkout-bar ">
+					            <li class="visited"> </li>
+					            <li  class=""></li>
+					            <li class=""></li>
+					            <li class=""></li>
+					            <li class="no-width"></li>
+					          </ul>
+					        </div>
+					      </div>
+					</div>
+				</div> 
+				<div class="row">
+					<div class="col ">
+						<h2 class="title-legal">Login Information</h2>
+						 
+                            <label class="row" >
+                                         <span class="col" ng-show="errorflg" style="color:red">{{errormsg}}</span>
+                                        <span class="col" ng-show="alreadyexists" style="color:red">Email Id already used. Please use a new id!</span>
+                            </label>
+							<div class="list register-1">
+								<span class="input-label">Email</span>
+							  	<label class="item item-input">
+							   	    <input type="email" placeholder="example@example.com" ng-model="Register[0].Email" onfocus="if(this.value =='example@example.com'){this.value = ''};" >
+							    </label>
+							  	<span class="input-label">Password</span>
+							 	 <label class="item item-input">
+							      <input type="password" placeholder="*************"  ng-model="Register[0].Password">
+							  </label>
+							  	<span class="input-label">Retype Password</span>
+							  <label class="item item-input">							    
+							    <input type="password" placeholder="*************" ng-model="Register[0].ConfirmPassword">
+							  </label>
+							</div>
+							<div class="text-center next-btndiv"><button class="button next-button" ng-click="RegisterClick(2,Register)">Next</button>
+							</div>
+						 
+					</div>
+				</div>
+				 
+				
+				 
+				 
+				 
+				  
+			     
+			</div><!-- Main content End -->
+		</div>	 <!-- wrapper Ends -->
+	</body>
+</html> 

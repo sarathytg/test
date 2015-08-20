@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="hCueLogin" ng-controller="hCueForgotpasswordController">
+        <head>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Pharmacy Forgotpassword</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+          
+          
+          
+          <link href="css/ionic.css" rel="stylesheet">         
+          <link href="css/custom.css" rel="stylesheet">
+          <script type="js/javascript" src="js/jquery-1.7.2.js"></script>        
+          <script type="js/javascript" src="js/ionic.js"></script>   
+          <script type="js/javascript" src="js/ionic-angular.js"></script>   
+          <script type="js/javascript" src="js/angular-animate.js"></script>
+          <script type="js/javascript" src="js/angular/tabs.js"></script>
+        
+        </head>
+	<body>
+			 
+ 
+			<div class="wrapper"><!--  Wrapper section starts -->
+ 				<div class="main-sec">
+				<div class="content content-bg "><!-- Main content starts -->
+		  
+					<h2 class="text-center forgot-pwd">Forgot your password</h2>
+					<div class="row">
+						<div class="col text-center pading-forgt">
+							<p class="no-wories">No worries! Let us know your email or mobile number and we'll send you a link to reset it</p>
+							<form action="" id="forgot-form">
+                                 <label class="row" >
+                                        <span class="col" ng-show="errormsg" style="color:red">Enter your email id or phone number.</span>
+                                    </label>
+							    <div class="list forgot-section">
+							    	 <div class="item item-input-inset">									     
+								      	 <input type="text" id="mailid" placeholder="enter your email id" onfocus="this.value = ''; mailidmodel = '';" onblur="if (mailidmodel == '') {mailidmodel = 'enter your email id';} if (this.value == '') {this.value = 'enter your email id';}" ng-model="mailidmodel">
+								      </div>
+								      	<div class="or-sec"><span>or</span></div>
+								       <div class="item item-input-inset">								      
+								        <input type="text" id="phone_no" placeholder="enter your phone number" onfocus="this.value = ''; phonenumbermodel = '';" onblur="if (phonenumbermodel == '') {phonenumbermodel = 'enter your phone number';} if (this.value == '') {this.value = 'enter your phone number';}" ng-model="phonenumbermodel">
+								      </div>
+								      <p class="question">Questions? Email <a href="#">help@hcue.co</a></p>
+								      
+								      <div class="forgot-btn">
+								        <button type="button" class="button forgtsubmit-btn" ng-click="ForgotPassword(mailidmodel,phonenumbermodel)"> Submit</button>
+								      </div>
+							      
+						      	</div>
+						    </form>
+						</div>
+							
+						</div>
+					</div><!-- Main content end -->
+				   
+				     
+				</div><!-- Main section End -->
+		</div>	 <!--  Wrapper section Ends -->
+	</body>
+</html> 

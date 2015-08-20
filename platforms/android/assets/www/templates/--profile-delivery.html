@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp"  ng-controller="hCueLoginController">
+        <head>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>About Pharmacy</title>
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'> -->
+           
+          
+          <link href="css/ionic.css" rel="stylesheet">         
+          <link href="css/custom.css" rel="stylesheet">
+          
+        
+        </head>
+	<body>
+		  
+			<!-- /bar-header Section -->
+			<div class="wrapper"><!-- wrapper Starts -->
+			<div class="content "><!-- Main content starts -->
+			
+				<h1 class="text-center h1-title"><span class="title-span">Profile</span></h1>
+				
+				<div class="row adress-sec"><!-- row -->
+					<div class="col col-30 col-img"> 
+						 <img src="images\pharma-img.png" alt="">
+						
+					</div> 
+					<div class="col col-50 col-adress">
+						<h3>{{profile[0].PharmaName}}</h3>
+						<p>{{profile[0].Address1}},{{profile[0].Address2}}.</p>
+						<span><i class="ion-ios-telephone"></i> +91 {{profile[0].ContactNumber}}</span>
+					</div>
+					<div class="col col-20 text-right col-edit"><a  href="#/app/editprofile"><i class="ion-compose"></i></a></div>
+				</div><!-- row end-->
+				<div class="row mail-details">
+					<div class="col text-center email-id">
+						<a href="#"><i class="ion-ios-email-outline"></i><span>{{profile[0].Email}}</span></a>
+					
+					</div>
+					<div class="col text-center">
+						<a href="#"><i class="ion-ios-world-outline"></i><span>{{profile[0].Website}}</span></a>
+					
+					</div>
+					
+				</div>
+				
+				<div class="row book-appoinment">
+					<div class="col app-title">
+						<h2 class="text-center book-appo"><a href="#">Order online <span>Coming Soon! </span></a></h2>
+					</div>
+				</div>
+				
+			  <div class="tabs-striped tab-section">
+			   <div class="tabs">
+			      <a class="tab-item person-1" href="#/app/profile">  <i class="ion-person"></i>  </a>
+			      <a class="tab-item  person-1" href="#/app/profilehr"> <i class="ion-ios-clock-outline"></i>    </a>
+			      <a class="tab-item active" href="#/app/profiledelivery">  <i class="ion-android-walk"></i>  </a>
+			    </div>
+			    
+			    <div id="tab-content-1" class="row content-1 about-doctor">
+                    <div class="col col-50">
+			    		<h3 class="text-center about-doc">Delivery</h3>
+                        </div>
+                    <div class="col col-50 text-right edit-icon">
+                      
+                     <a  href="#/app/editprofiledelivery"><i class="ion-compose"></i></a>
+                    </div>
+			    </div>
+			   
+			  </div>
+					 <div class="ord-del-sec-li">
+					    <div class="row weekdays-disp" ng-repeat="(key,value) in deliveryExecutive">
+					      
+					        <div class="col col-20 del-pr-img"> <img src="images/contact-1.png"> </div>
+					        <div class="col col-30 del-pr-name">
+					          <h3>{{value}}</h3>
+					        </div>
+					        <div class="col col-30 pr-con-no"> <a href="javascript:;"><i class="ion-ios-telephone"></i>+91 {{key}}</a> </div>
+					        <div class="col col-20 del-edi-li text-center"> <a href="javascript:;" class="del-icon-i"><i class="ion-ios-trash-outline"></i></a> <a href="javascript:;" class="edit-icon-i"><i class="ion-edit"></i></a> </div>
+					      </div>
+					    </div>
+					    
+					    <!--
+					    <div class="col">
+					    <a class="add-new-more text-left" href="javascript:;"><i class="ion-android-add"></i>Add New</a>
+					  </div>
+							  -->
+			     
+			</div><!-- Main content End -->
+			
+			
+		</div>	 <!-- wrapper Ends -->
+	</body>
+</html> 
