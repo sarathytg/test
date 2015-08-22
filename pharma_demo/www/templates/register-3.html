@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+        <head>
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Pharam Registration</title>
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>-->
+           
+          
+          <link href="css/ionic.css" rel="stylesheet">         
+          <link href="css/custom.css" rel="stylesheet">
+         
+        
+        </head>
+	<body>
+		 
+			<div class="wrapper"><!-- wrapper Starts -->
+			<div class="content "><!-- Main content starts -->
+				
+				<h1 class="text-center register">
+					<a href="" class="ion-android-arrow-back" ng-click="NavigateBack()"></a><span class="title-span">Register</span></h1>
+					
+				 <div class="row">
+					<div class="col">
+						 <div class="basic-info">
+					        <div class="checkout-wrap">
+					          <ul class="checkout-bar step-3 ">
+					            <li class="visited"> </li>
+					            <li  class="visited"></li>
+					            <li class="active-li"></li>
+					            <li class=""></li>
+					            <li class="no-width"></li>
+					          </ul>
+					        </div>
+					      </div>
+					</div>
+				</div> 
+				<div class="row">
+					<div class="col legal-info">
+						<h2 class="phar-titleinfo">About Us</h2>
+						 
+						 
+                            <label class="row" >
+                                        <span class="col" ng-show="errorflg" style="color:red">{{errormsg}}</span>
+                            </label>
+							<div class="col text-center"><a class="profile-img" href=""><img alt="" src="images/del-img.png"></a></div>
+							<div class="list register-1">
+								<span class="input-label">Contact Name</span>
+							  	<label class="item item-input">
+							   	    <input type="text" placeholder="John Doe"  ng-model="Register[0].about.ContactName">
+							    </label>
+							  	<span class="input-label">About Pharmacy</span>
+							 	 <label class="item item-input about-pharmcy">
+							      <input class="textarea-input" type="text" placeholder=" "  ng-model="Register[0].about.Description">
+							  </label>
+							  
+							</div>
+							<div class="text-center next-btndiv margin65"><button class="button next-button" ng-click="RegisterClick(4,Register)">Next</button>
+							</div>
+						 
+					</div>
+				</div>
+				 
+				
+				 
+				 
+				 
+				  
+			     
+			</div><!-- Main content End -->
+		</div>	 <!-- wrapper Ends -->
+	</body>
+</html> 
