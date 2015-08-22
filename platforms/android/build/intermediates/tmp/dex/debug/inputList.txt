@@ -1,2 +1,0 @@
-D:\Project\pharma_demo\platforms\android\build\intermediates\classes\debug
-D:\Project\pharma_demo\platforms\android\build\intermediates\pre-dexed\debug\classes-5e1e1f3ffc2567eddfb4c8bd4d22c4a51272580a.jar
